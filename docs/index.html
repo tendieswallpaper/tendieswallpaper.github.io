@@ -1,0 +1,609 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tendies Wallpaper — iOS Dynamic Wallpapers for Nugget</title>
+<meta name="description" content="Tendies Wallpaper is the home of dynamic iOS &amp; iPadOS wallpapers for Nugget. Learn what a .tendies file is, how to install animated lock-screen wallpapers without a jailbreak, and browse the full library at Nugget Wallpaper.">
+<meta name="keywords" content="tendies wallpaper, tendies file, Nugget wallpaper, dynamic wallpaper iOS, PosterBoard wallpaper, ios 18 wallpaper, ios 26 wallpaper, animated lock screen wallpaper">
+<link rel="canonical" href="https://tendieswallpaper.github.io/">
+<meta name="robots" content="index, follow">
+
+<meta property="og:type" content="website">
+<meta property="og:title" content="Tendies Wallpaper — iOS Dynamic Wallpapers for Nugget">
+<meta property="og:description" content="The home of dynamic iOS &amp; iPadOS wallpapers for Nugget. Browse the library, download .tendies files, and install animated lock-screen wallpapers — no jailbreak needed.">
+<meta property="og:url" content="https://tendieswallpaper.github.io/">
+<meta property="og:site_name" content="Tendies Wallpaper">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tendies Wallpaper — iOS Dynamic Wallpapers for Nugget">
+<meta name="twitter:description" content="Dynamic iOS &amp; iPadOS wallpapers for Nugget. Download .tendies files and install animated lock screens without a jailbreak.">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "WebSite",
+  "name": "Tendies Wallpaper",
+  "url": "https://tendieswallpaper.github.io/",
+  "description": "The home of dynamic iOS and iPadOS wallpapers for Nugget. Learn about .tendies files and install animated lock-screen wallpapers without a jailbreak.",
+  "sameAs": [
+    "https://mwallx.com/",
+    "https://github.com/leminlimez/Nugget"
+  ]
+}
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is a tendies wallpaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A tendies wallpaper is a dynamic, animated wallpaper for iPhone and iPad, shipped as a .tendies file that is installed through the Nugget tool. Tendies files restore PosterBoard wallpaper descriptors onto iOS 17-26 devices so the wallpaper appears in the lock-screen Collections picker."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is a .tendies file?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A .tendies file is the wallpaper bundle format used by Nugget and Pocket Poster. It stores the PosterBoard file structure that gets restored to your iPhone or iPad, and it is what you import when you want to install a custom dynamic lock-screen wallpaper."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do tendies wallpapers require a jailbreak?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Tendies wallpapers are applied with the open-source Nugget tool, which uses Apple's own SparseRestore and BookRestore mechanisms to modify files safely — no jailbreak is required."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which iOS versions support tendies wallpapers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tendies wallpapers support iOS and iPadOS 17 through 26 on compatible iPhones and iPads. Some wallpapers may require a specific iOS version, so always check the wallpaper page for compatibility notes."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Where can I download tendies wallpapers?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Browse and download tendies wallpapers from the Nugget Wallpaper library at mwallx.com, which hosts a curated collection of dynamic and static wallpapers including anime, sports, Marvel and more."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I install a tendies wallpaper on my iPhone?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Download the .tendies file, open the PosterBoard feature inside Nugget, select the file, apply changes, and reboot your device. After rebooting, open the lock-screen wallpaper editor and find the new wallpaper under Collections or Favorites."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is using tendies wallpapers safe?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Nugget is a widely used open-source project with thousands of users. As with any system modification, back up your device first. Changes are reversible by restoring your device through iTunes or Finder."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What is the difference between Nugget Wallpaper and tendies wallpaper?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tendies Wallpaper is the brand name for the collection of dynamic wallpapers, while Nugget Wallpaper (mwallx.com) is the library that hosts them. Both are part of the same ecosystem, powered by the open-source Nugget tool for iOS customization."
+      }
+    }
+  ]
+}
+</script>
+
+<style>
+  :root {
+    --bg: #0b0d12;
+    --bg-soft: #12151d;
+    --card: #171b26;
+    --border: #232a3a;
+    --text: #e8ebf2;
+    --text-dim: #9aa3b5;
+    --primary: #6c5ce7;
+    --primary-alt: #fd79a8;
+    --accent: #00d2ff;
+    --radius: 14px;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  a { color: var(--accent); text-decoration: none; }
+  a:hover { text-decoration: underline; }
+
+  .wrap { max-width: 1120px; margin: 0 auto; padding: 0 24px; }
+
+  header.site {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(11, 13, 18, 0.85);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+  }
+  nav { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; font-weight: 700; font-size: 18px; color: var(--text); }
+  .brand:hover { text-decoration: none; }
+  .logo {
+    width: 34px; height: 34px; border-radius: 9px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-alt));
+    display: grid; place-items: center; font-size: 17px;
+  }
+  .nav-links { display: flex; gap: 22px; font-size: 15px; }
+  .nav-links a { color: var(--text-dim); }
+  .nav-links a:hover { color: var(--text); }
+  .cta {
+    display: inline-block;
+    padding: 10px 20px; border-radius: 10px;
+    background: linear-gradient(135deg, var(--primary), var(--primary-alt));
+    color: #fff; font-weight: 600; font-size: 15px;
+    box-shadow: 0 8px 24px rgba(124, 92, 231, 0.35);
+  }
+  .cta:hover { text-decoration: none; filter: brightness(1.08); }
+
+  .hero {
+    padding: 96px 0 72px;
+    background:
+      radial-gradient(900px 420px at 15% -10%, rgba(108, 92, 231, 0.22), transparent 60%),
+      radial-gradient(700px 380px at 90% 0%, rgba(0, 210, 255, 0.16), transparent 60%);
+  }
+  .hero .kicker {
+    display: inline-block; padding: 6px 14px; border-radius: 999px;
+    background: rgba(108, 92, 231, 0.14); border: 1px solid rgba(108, 92, 231, 0.35);
+    color: #b9a9ff; font-size: 13px; font-weight: 600; letter-spacing: 0.3px; margin-bottom: 20px;
+  }
+  .hero h1 { font-size: clamp(34px, 6vw, 56px); line-height: 1.12; letter-spacing: -0.5px; margin-bottom: 20px; }
+  .hero h1 .grad { background: linear-gradient(90deg, var(--accent), var(--primary), var(--primary-alt)); -webkit-background-clip: text; background-clip: text; color: transparent; }
+  .hero p.lead { font-size: 19px; color: var(--text-dim); max-width: 720px; margin-bottom: 34px; }
+  .hero-actions { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; }
+  .btn-ghost {
+    display: inline-block; padding: 10px 20px; border-radius: 10px;
+    border: 1px solid var(--border); color: var(--text); font-weight: 600; font-size: 15px;
+  }
+  .btn-ghost:hover { border-color: var(--primary); text-decoration: none; }
+  .hero-stats { display: flex; flex-wrap: wrap; gap: 40px; margin-top: 56px; }
+  .stat b { display: block; font-size: 26px; }
+  .stat span { color: var(--text-dim); font-size: 14px; }
+
+  section { padding: 72px 0; }
+  section.alt { background: var(--bg-soft); border-block: 1px solid var(--border); }
+  .sec-head { max-width: 760px; margin-bottom: 40px; }
+  .sec-head .tag {
+    display: inline-block; font-size: 12px; font-weight: 700; letter-spacing: 1.2px;
+    text-transform: uppercase; color: var(--primary-alt); margin-bottom: 10px;
+  }
+  .sec-head h2 { font-size: clamp(26px, 4vw, 36px); letter-spacing: -0.4px; margin-bottom: 14px; }
+  .sec-head p { color: var(--text-dim); font-size: 17px; }
+
+  .grid { display: grid; gap: 20px; }
+  .g3 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+  .card {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: var(--radius); padding: 26px;
+    transition: transform 0.2s ease, border-color 0.2s ease;
+  }
+  .card:hover { transform: translateY(-3px); border-color: var(--primary); }
+  .card .icon { font-size: 26px; margin-bottom: 14px; }
+  .card h3 { font-size: 18px; margin-bottom: 8px; }
+  .card p { color: var(--text-dim); font-size: 15px; }
+
+  .steps { counter-reset: step; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+  .step { position: relative; background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 26px; }
+  .step::before {
+    counter-increment: step; content: counter(step);
+    position: absolute; top: -14px; left: 20px;
+    width: 30px; height: 30px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--primary), var(--primary-alt));
+    display: grid; place-items: center; font-weight: 700; font-size: 15px; color: #fff;
+  }
+  .step h3 { font-size: 16px; margin-top: 10px; margin-bottom: 6px; }
+  .step p { color: var(--text-dim); font-size: 14.5px; }
+
+  .showcase { display: grid; grid-template-columns: repeat(auto-fit, minmax(240px, 1fr)); gap: 18px; }
+  .tile {
+    position: relative; display: block;
+    border: 1px solid var(--border); border-radius: var(--radius);
+    overflow: hidden; aspect-ratio: 9 / 16; min-height: 320px;
+    background: linear-gradient(160deg, #2a2f45, #141826);
+  }
+  .tile:hover { text-decoration: none; border-color: var(--primary); }
+  .tile .thumb {
+    position: absolute; inset: 0;
+    background-size: cover; background-position: center;
+    opacity: 0.55; transition: opacity 0.25s ease, transform 0.4s ease;
+  }
+  .tile:hover .thumb { opacity: 0.75; transform: scale(1.05); }
+  .tile .label { position: absolute; left: 0; right: 0; bottom: 0; padding: 54px 16px 16px; background: linear-gradient(transparent, rgba(11,13,18,0.92)); }
+  .tile .label b { display: block; font-size: 16px; }
+  .tile .label span { color: var(--text-dim); font-size: 13px; }
+
+  .faq { max-width: 800px; }
+  details {
+    background: var(--card); border: 1px solid var(--border);
+    border-radius: 12px; margin-bottom: 12px; padding: 6px 22px;
+  }
+  details summary { cursor: pointer; font-weight: 600; font-size: 16px; padding: 14px 0; list-style: none; }
+  details summary::-webkit-details-marker { display: none; }
+  details summary::after { content: "+"; float: right; color: var(--primary); font-size: 20px; font-weight: 400; }
+  details[open] summary::after { content: "-"; }
+  details p { color: var(--text-dim); font-size: 15px; padding-bottom: 18px; }
+
+  .community { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+  .community a {
+    background: var(--card); border: 1px solid var(--border); border-radius: var(--radius);
+    padding: 18px 20px; color: var(--text); font-weight: 600; font-size: 15px;
+    display: flex; align-items: center; gap: 10px;
+  }
+  .community a:hover { border-color: var(--primary); text-decoration: none; }
+  .community .ic { font-size: 20px; }
+  .community small { display: block; color: var(--text-dim); font-weight: 400; font-size: 13px; margin-top: 2px; }
+
+  .banner {
+    border-radius: var(--radius); padding: 40px;
+    background: linear-gradient(135deg, rgba(108,92,231,0.2), rgba(0,210,255,0.12)), var(--card);
+    border: 1px solid rgba(108,92,231,0.4);
+    text-align: center;
+  }
+  .banner h2 { font-size: clamp(24px, 4vw, 32px); margin-bottom: 12px; }
+  .banner p { color: var(--text-dim); max-width: 620px; margin: 0 auto 26px; }
+
+  footer.site { border-top: 1px solid var(--border); padding: 44px 0 60px; background: var(--bg-soft); }
+  .foot-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 32px; margin-bottom: 34px; }
+  .foot-grid h4 { font-size: 14px; letter-spacing: 0.5px; margin-bottom: 12px; color: var(--text); }
+  .foot-grid a { display: block; color: var(--text-dim); font-size: 14px; padding: 3px 0; }
+  .foot-grid a:hover { color: var(--text); }
+  footer.site .copyright { color: var(--text-dim); font-size: 13px; border-top: 1px solid var(--border); padding-top: 22px; }
+  footer.site .copyright a { color: var(--text-dim); }
+  footer.site .copyright a:hover { color: var(--text); }
+
+  @media (max-width: 720px) {
+    .nav-links { display: none; }
+    .hero { padding: 64px 0 48px; }
+    .hero-stats { gap: 24px; }
+  }
+</style>
+</head>
+<body>
+
+<header class="site">
+  <div class="wrap">
+    <nav>
+      <a class="brand" href="/">
+        <span class="logo">T</span>
+        <span>Tendies Wallpaper</span>
+      </a>
+      <div class="nav-links">
+        <a href="#about">What is it</a>
+        <a href="#tendies">.tendies file</a>
+        <a href="#install">Install</a>
+        <a href="#gallery">Gallery</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <a class="cta" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">Browse Wallpapers</a>
+    </nav>
+  </div>
+</header>
+
+<section class="hero">
+  <div class="wrap">
+    <span class="kicker">The official home of Tendies Wallpaper</span>
+    <h1>Dynamic iOS wallpapers for <span class="grad">Nugget</span>.<br>Your lock screen, alive.</h1>
+    <p class="lead">
+      Tendies Wallpaper is a curated collection of animated, dynamic wallpapers for iPhone and iPad —
+      installed through the open-source Nugget tool with a simple <strong>.tendies file</strong>. No jailbreak,
+      no compromise. Supported on iOS and iPadOS <strong>17&ndash;26</strong>.
+    </p>
+    <div class="hero-actions">
+      <a class="cta" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">Explore the Wallpaper Library</a>
+      <a class="btn-ghost" href="#install">How to install</a>
+      <a class="btn-ghost" href="https://mwallx.com/en/tutorial/nugget" target="_blank" rel="noopener nofollow">Read the tutorial</a>
+    </div>
+    <div class="hero-stats">
+      <div class="stat"><b>iOS 17&ndash;26</b><span>Full version support</span></div>
+      <div class="stat"><b>No jailbreak</b><span>Uses SparseRestore / BookRestore</span></div>
+      <div class="stat"><b>100% free</b><span>Open-source &amp; community driven</span></div>
+    </div>
+  </div>
+</section>
+
+<section id="about">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">What is Tendies Wallpaper?</span>
+      <h2>Animated wallpapers for iPhone and iPad, done right</h2>
+      <p>
+        Tendies Wallpaper is the brand behind a growing library of dynamic lock-screen wallpapers built
+        for the <strong>Nugget</strong> ecosystem. Every wallpaper is packaged as a <strong>.tendies file</strong> —
+        a PosterBoard wallpaper bundle that turns Apple's native lock screen into a living, breathing canvas.
+        The full collection is hosted at <a href="https://mwallx.com/en" target="_blank" rel="noopener nofollow">Nugget Wallpaper (mwallx.com)</a>.
+      </p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="icon">&#127916;</div>
+        <h3>Truly dynamic</h3>
+        <p>Motion, depth and animation on the native lock screen, not a static image. Each tendies wallpaper is crafted to feel like a premium live screen.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128275;</div>
+        <h3>No jailbreak</h3>
+        <p>Tendies wallpapers are applied with Nugget, which uses Apple's own SparseRestore and BookRestore restore mechanisms to write files safely.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#127912;</div>
+        <h3>Curated library</h3>
+        <p>Anime, manga, sports, Marvel, space dreamscapes and more — a hand-picked gallery updated weekly on the Nugget Wallpaper site.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128421;&#65039;</div>
+        <h3>Powered by Nugget</h3>
+        <p>Built on the open-source <a href="https://github.com/leminlimez/Nugget" target="_blank" rel="noopener nofollow">Nugget tool</a> by leminlimez, trusted by a community of thousands of users.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128241;</div>
+        <h3>iPhone &amp; iPad</h3>
+        <p>Works across compatible iPhones and iPads running iOS and iPadOS 17 through 26 — Dynamic Island or not.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128259;</div>
+        <h3>Reversible &amp; safe</h3>
+        <p>Everything is reversible. Back up before applying; restore through iTunes or Finder anytime to return to stock.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="tendies" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">The .tendies file</span>
+      <h2>What is a tendies file?</h2>
+      <p>
+        A <strong>.tendies file</strong> is the wallpaper bundle format used across the Nugget / PosterBoard ecosystem
+        (including Cowabunga and Pocket Poster). It stores the exact PosterBoard file structure that Nugget restores onto
+        your device, so the wallpaper shows up right inside the native lock-screen wallpaper picker.
+      </p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="icon">&#128230;</div>
+        <h3>Container format</h3>
+        <p>Restores directly to the PosterBoard app container, keeping the exact file structure and wallpaper IDs untouched.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#128193;</div>
+        <h3>Descriptor format</h3>
+        <p>Restores to the wallpaper descriptors folder with randomized UUIDs so multiple tendies wallpapers never conflict.</p>
+      </div>
+      <div class="card">
+        <div class="icon">&#9881;&#65039;</div>
+        <h3>Extra variants</h3>
+        <p>Video and photo variants target Suggested Photos; mercury variants target the Mercury Poster on supported iOS versions.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="install">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Getting started</span>
+      <h2>Install a tendies wallpaper in 4 steps</h2>
+      <p>The entire process takes a few minutes with a USB cable and the free Nugget app. Full details are in the official tutorial.</p>
+    </div>
+    <div class="steps">
+      <div class="step">
+        <h3>Download the file</h3>
+        <p>Pick a wallpaper from the library and download its <strong>.tendies</strong> file.</p>
+      </div>
+      <div class="step">
+        <h3>Connect your device</h3>
+        <p>Plug your iPhone/iPad into your computer via USB and trust it. Works on Windows, macOS and Linux.</p>
+      </div>
+      <div class="step">
+        <h3>Import &amp; apply</h3>
+        <p>Open PosterBoard inside Nugget, select the file, then hit Apply Changes.</p>
+      </div>
+      <div class="step">
+        <h3>Reboot &amp; enjoy</h3>
+        <p>After reboot, open the lock-screen editor and find your new wallpaper under Collections or Favorites.</p>
+      </div>
+    </div>
+    <p style="margin-top: 28px; color: var(--text-dim); font-size: 15px;">
+      Facing an issue? Read the official <a href="https://mwallx.com/en/tutorial/nugget" target="_blank" rel="noopener nofollow">Nugget Wallpaper tutorial</a> or join the community channels below.
+    </p>
+  </div>
+</section>
+
+<section id="gallery" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">The library</span>
+      <h2>Browse the Tendies Wallpaper gallery</h2>
+      <p>
+        Every tendies wallpaper below is hosted and downloadable on
+        <a href="https://mwallx.com" target="_blank" rel="noopener nofollow">Nugget Wallpaper (mwallx.com)</a>.
+        Sort the gallery by <a href="https://mwallx.com/en/wallpapers?sortBy=latest" target="_blank" rel="noopener nofollow">Latest</a>
+        or <a href="https://mwallx.com/en/wallpapers?sortBy=hot" target="_blank" rel="noopener nofollow">Hot</a> to see what's trending.
+      </p>
+    </div>
+    <div class="showcase">
+      <a class="tile" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">
+        <div class="thumb" style="background-image: linear-gradient(160deg, rgba(108,92,231,0.55), rgba(11,13,18,0.9));"></div>
+        <div class="label"><b>Anime</b><span>Evangelion, Sylphiette &amp; more</span></div>
+      </a>
+      <a class="tile" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">
+        <div class="thumb" style="background-image: linear-gradient(160deg, rgba(0,210,255,0.5), rgba(11,13,18,0.9));"></div>
+        <div class="label"><b>Sports &amp; Marvel</b><span>Clubs, heroes, brand-new days</span></div>
+      </a>
+      <a class="tile" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">
+        <div class="thumb" style="background-image: linear-gradient(160deg, rgba(253,121,168,0.5), rgba(11,13,18,0.9));"></div>
+        <div class="label"><b>Dreamscapes</b><span>Planets, stars &amp; abstracts</span></div>
+      </a>
+      <a class="tile" href="https://mwallx.com/en/wallpapers?wallpaperType=apple_official" target="_blank" rel="noopener nofollow">
+        <div class="thumb" style="background-image: linear-gradient(160deg, rgba(255,255,255,0.35), rgba(11,13,18,0.9));"></div>
+        <div class="label"><b>Official</b><span>Apple-style poster picks</span></div>
+      </a>
+    </div>
+    <div style="text-align: center; margin-top: 34px;">
+      <a class="cta" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">View All Wallpapers</a>
+    </div>
+  </div>
+</section>
+
+<section id="faq">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">FAQ</span>
+      <h2>Frequently asked questions</h2>
+      <p>Everything you need to know about tendies wallpapers before you get started.</p>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary>What is a tendies wallpaper?</summary>
+        <p>A tendies wallpaper is a dynamic, animated wallpaper for iPhone and iPad, shipped as a .tendies file that is installed through the Nugget tool. Tendies files restore PosterBoard wallpaper descriptors onto iOS 17&ndash;26 devices so the wallpaper appears in the lock-screen Collections picker.</p>
+      </details>
+      <details>
+        <summary>What is a .tendies file?</summary>
+        <p>A .tendies file is the wallpaper bundle format used by Nugget and Pocket Poster. It stores the PosterBoard file structure that gets restored to your iPhone or iPad, and it is what you import when you want to install a custom dynamic lock-screen wallpaper.</p>
+      </details>
+      <details>
+        <summary>Do tendies wallpapers require a jailbreak?</summary>
+        <p>No. Tendies wallpapers are applied with the open-source Nugget tool, which uses Apple's own SparseRestore and BookRestore mechanisms to modify files safely — no jailbreak is required.</p>
+      </details>
+      <details>
+        <summary>Which iOS versions support tendies wallpapers?</summary>
+        <p>Tendies wallpapers support iOS and iPadOS 17 through 26 on compatible iPhones and iPads. Some wallpapers may require a specific iOS version, so always check the wallpaper page for compatibility notes.</p>
+      </details>
+      <details>
+        <summary>Where can I download tendies wallpapers?</summary>
+        <p>Browse and download tendies wallpapers from the Nugget Wallpaper library at mwallx.com, which hosts a curated collection of dynamic and static wallpapers including anime, sports, Marvel and more.</p>
+      </details>
+      <details>
+        <summary>How do I install a tendies wallpaper on my iPhone?</summary>
+        <p>Download the .tendies file, open the PosterBoard feature inside Nugget, select the file, apply changes, and reboot your device. After rebooting, open the lock-screen wallpaper editor and find the new wallpaper under Collections or Favorites.</p>
+      </details>
+      <details>
+        <summary>Is using tendies wallpapers safe?</summary>
+        <p>Nugget is a widely used open-source project with thousands of users. As with any system modification, back up your device first. Changes are reversible by restoring your device through iTunes or Finder.</p>
+      </details>
+      <details>
+        <summary>What is the difference between Nugget Wallpaper and tendies wallpaper?</summary>
+        <p>Tendies Wallpaper is the brand name for the collection of dynamic wallpapers, while Nugget Wallpaper (mwallx.com) is the library that hosts them. Both are part of the same ecosystem, powered by the open-source Nugget tool for iOS customization.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section id="community" class="alt">
+  <div class="wrap">
+    <div class="sec-head">
+      <span class="tag">Community</span>
+      <h2>Join the Nugget Wallpaper community</h2>
+      <p>Follow the channels for new wallpaper drops, previews and quick install tips.</p>
+    </div>
+    <div class="community">
+      <a href="https://www.tiktok.com/@nugget_wallpaper" target="_blank" rel="noopener nofollow">
+        <span class="ic">&#127917;</span>
+        TikTok
+        <small>@nugget_wallpaper</small>
+      </a>
+      <a href="https://t.me/nugget_wallpaper" target="_blank" rel="noopener nofollow">
+        <span class="ic">&#9993;</span>
+        Telegram
+        <small>nugget_wallpaper</small>
+      </a>
+      <a href="https://x.com/nuggetwallpaper" target="_blank" rel="noopener nofollow">
+        <span class="ic">&#120143;</span>
+        X (Twitter)
+        <small>@nuggetwallpaper</small>
+      </a>
+      <a href="https://github.com/leminlimez/Nugget" target="_blank" rel="noopener nofollow">
+        <span class="ic">&#128588;</span>
+        Nugget GitHub
+        <small>leminlimez/Nugget</small>
+      </a>
+      <a href="https://nugget.host" target="_blank" rel="noopener nofollow">
+        <span class="ic">&#127760;</span>
+        Nugget Host
+        <small>Official iOS tool site</small>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="cta">
+  <div class="wrap">
+    <div class="banner">
+      <h2>Ready to bring your lock screen to life?</h2>
+      <p>
+        Download a free tendies wallpaper today — no jailbreak required. Browse the full library, check prices,
+        track orders and follow the step-by-step tutorial on the Nugget Wallpaper site.
+      </p>
+      <a class="cta" href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">Start Exploring</a>
+      <a class="btn-ghost" style="margin-left: 10px;" href="https://mwallx.com/en/price" target="_blank" rel="noopener nofollow">See Pricing</a>
+    </div>
+  </div>
+</section>
+
+<footer class="site">
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <h4>Tendies Wallpaper</h4>
+        <a href="/">Home</a>
+        <a href="#about">What is it</a>
+        <a href="#tendies">The .tendies file</a>
+        <a href="#install">Install guide</a>
+        <a href="#faq">FAQ</a>
+      </div>
+      <div>
+        <h4>Nugget Wallpaper</h4>
+        <a href="https://mwallx.com/en/wallpapers" target="_blank" rel="noopener nofollow">Browse all wallpapers</a>
+        <a href="https://mwallx.com/en/wallpapers?sortBy=latest" target="_blank" rel="noopener nofollow">Latest additions</a>
+        <a href="https://mwallx.com/en/wallpapers?sortBy=hot" target="_blank" rel="noopener nofollow">Hot right now</a>
+        <a href="https://mwallx.com/en/tutorial/nugget" target="_blank" rel="noopener nofollow">Import tutorial</a>
+      </div>
+      <div>
+        <h4>Project</h4>
+        <a href="https://github.com/leminlimez/Nugget" target="_blank" rel="noopener nofollow">Nugget on GitHub</a>
+        <a href="https://nugget.host" target="_blank" rel="noopener nofollow">Official Nugget tool</a>
+        <a href="https://mwallx.com/en/price" target="_blank" rel="noopener nofollow">Pricing</a>
+        <a href="https://mwallx.com/en/orders" target="_blank" rel="noopener nofollow">Orders</a>
+      </div>
+      <div>
+        <h4>Official Policies (mwallx.com)</h4>
+        <a href="https://mwallx.com/en/privacy-policy" target="_blank" rel="noopener nofollow">Privacy Policy</a>
+        <a href="https://mwallx.com/en/terms-of-service" target="_blank" rel="noopener nofollow">Terms of Service</a>
+        <a href="https://mwallx.com/en/dmca-policy" target="_blank" rel="noopener nofollow">DMCA Policy</a>
+        <a href="https://mwallx.com/en/ugc-policy" target="_blank" rel="noopener nofollow">UGC Policy</a>
+      </div>
+    </div>
+    <div class="copyright">
+      Tendies Wallpaper is an introduction and referral page for the curated wallpaper library hosted at
+      <a href="https://mwallx.com" target="_blank" rel="noopener nofollow">Nugget Wallpaper (mwallx.com)</a>. "Nugget" wallpapers are applied via the open-source Nugget tool
+      (<a href="https://github.com/leminlimez/Nugget" target="_blank" rel="noopener nofollow">leminlimez/Nugget</a>).
+      Apple, iPhone, iPad and iOS are trademarks of Apple Inc. This site is not affiliated with Apple.
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
