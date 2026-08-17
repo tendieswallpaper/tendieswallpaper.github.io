@@ -1,4 +1,3 @@
 User-agent: *
 Allow: /
-
 Sitemap: https://tendieswallpaper.github.io/sitemap.xml
