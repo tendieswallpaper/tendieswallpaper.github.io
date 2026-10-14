@@ -1,7 +1,7 @@
 User-agent: *
 Allow: /
 
-# AI search engines (GEO)
+# AI search engines (GEO / AI SEO)
 User-agent: PerplexityBot
 Allow: /
 

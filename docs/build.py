@@ -1237,11 +1237,117 @@ COMMUNITY = [
     {"label": "comm_host", "desc": "comm_host_d", "href": TUTORIAL_URL},
 ]
 
+def load_wallpapers_data():
+    here = os.path.dirname(os.path.abspath(__file__))
+    data_file = os.path.join(here, "data", "wallpapers.json")
+    if os.path.exists(data_file):
+        try:
+            with open(data_file, "r", encoding="utf-8") as f:
+                return json.load(f)
+        except Exception as e:
+            print("Warning: failed to load wallpapers.json:", e)
+    return [
+        {
+            "slug": "steel-ball-run-jojo-spin-spin",
+            "title": "Steel Ball Run — Spin Spin",
+            "category": "Anime",
+            "category_slug": "anime",
+            "tag": "JoJo / Anime",
+            "img": "https://wallpaper-oss.9527012346.xyz/nugget/previews/custom/gifs/JOJO_sbr_en.gif",
+            "target_url": "https://tendieswallpaper.com/wallpapers/steel-ball-run-jojo-spin-spin",
+            "summary": "High-octane dynamic lock screen featuring Gyro Zeppeli and Johnny Joestar with continuous Golden Spin particle physics. Custom 60 FPS ProMotion loop optimized for iOS 18 lock screen.",
+            "description": "Experience the legendary Steel Ball Run horse race right on your iPhone lock screen. This animated .tendies wallpaper captures Gyro Zeppeli unleashing the Golden Spin alongside Johnny Joestar, rendered in crisp 60 FPS fluid motion. Designed specifically for OLED displays, the rich dark contrast preserves battery life while native PosterBoard integration ensures zero background CPU overhead.",
+            "specs": {
+                "resolution": "1179 × 2556 px (Retina XDR)",
+                "fps": "60 FPS Fluid Animation",
+                "format": ".tendies (PosterBoard Bundle)",
+                "file_size": "14.2 MB",
+                "depth_effect": "Supported (Clock Intersect)",
+                "aod_support": "Supported (Smooth Ambient Fade)",
+                "jailbreak": "No (Apple SparseRestore)",
+                "compatibility": "iOS 17.0 – 27.0 (iPhone & iPad)"
+            },
+            "tags": ["JoJo", "Steel Ball Run", "Anime", "Gyro Zeppeli", "Dynamic Lock Screen", "60 FPS"]
+        },
+        {
+            "slug": "my-dress-up-darling-marin-six-shots",
+            "title": "My Dress-Up Darling — Marin, Six Shots",
+            "category": "Anime",
+            "category_slug": "anime",
+            "tag": "Anime / Motion",
+            "img": "https://wallpaper-oss.9527012346.xyz/nugget/previews-host/gifs/my_dress_up_darling_kitagawa_marin_6_shot_burst_en.gif",
+            "target_url": "https://tendieswallpaper.com/wallpapers/my-dress-up-darling-marin-six-shots",
+            "summary": "Vibrant lock screen animation featuring Marin Kitagawa in a dynamic 6-shot camera burst sequence. Tuned for OLED true blacks with high dynamic contrast.",
+            "description": "Bring Marin Kitagawa's irresistible charisma to your daily unlock experience. This 6-shot burst animation loops seamlessly across key photoshoot moments from My Dress-Up Darling. Engineered as a native .tendies descriptor bundle, it works seamlessly with iOS 18 depth effects and honors system wake triggers without extra battery consumption.",
+            "specs": {
+                "resolution": "1179 × 2556 px (Retina XDR)",
+                "fps": "60 FPS Fluid Animation",
+                "format": ".tendies (PosterBoard Bundle)",
+                "file_size": "18.6 MB",
+                "depth_effect": "Supported (Multilayer Depth)",
+                "aod_support": "Supported (Subtle Standby Dim)",
+                "jailbreak": "No (Apple SparseRestore)",
+                "compatibility": "iOS 17.0 – 27.0 (iPhone & iPad)"
+            },
+            "tags": ["My Dress-Up Darling", "Marin Kitagawa", "Anime", "Cosplay", "iOS 18 Wallpaper", "60 FPS"]
+        },
+        {
+            "slug": "f1-hamilton-sunglasses",
+            "title": "F1 — Hamilton in Sunglasses",
+            "category": "Sports",
+            "category_slug": "sports",
+            "tag": "Sports / F1",
+            "img": "https://wallpaper-oss.9527012346.xyz/nugget/previews-host/gifs/f1_lewis_hamilton_sunglasses_red_white_en.gif",
+            "target_url": "https://tendieswallpaper.com/wallpapers/f1-hamilton-sunglasses",
+            "summary": "Sleek Formula 1 lock screen animation capturing Lewis Hamilton in classic paddock aviator sunglasses with high-contrast red and white lighting.",
+            "description": "For Formula 1 racing enthusiasts and Lewis Hamilton supporters. This ultra-clean dynamic wallpaper captures the 7-time World Champion under dramatic circuit lighting with subtle head movement and atmospheric lens flares. Styled with deep cinematic shadows to maintain peak lock-screen clock legibility.",
+            "specs": {
+                "resolution": "1179 × 2556 px (Retina XDR)",
+                "fps": "60 FPS Fluid Animation",
+                "format": ".tendies (PosterBoard Bundle)",
+                "file_size": "11.8 MB",
+                "depth_effect": "Supported (Subject Isolation)",
+                "aod_support": "Supported (Monochrome Ambient)",
+                "jailbreak": "No (Apple SparseRestore)",
+                "compatibility": "iOS 17.0 – 27.0 (iPhone & iPad)"
+            },
+            "tags": ["Formula 1", "Lewis Hamilton", "Motorsport", "Sports", "Dark Aesthetic", "iOS 18"]
+        },
+        {
+            "slug": "mushoku-tensei-sylphiette-fitz",
+            "title": "Mushoku Tensei — Sylphiette (Fitz)",
+            "category": "Anime",
+            "category_slug": "anime",
+            "tag": "Anime / Fantasy",
+            "img": "https://wallpaper-oss.9527012346.xyz/nugget/previews/custom/gifs/mushoku_tensei_jobless_reincarnation_sylphiette_greyrat_sylphy_fitz_2.gif",
+            "target_url": "https://tendieswallpaper.com/wallpapers/mushoku-tensei-sylphiette-fitz",
+            "summary": "Enchanting animated wallpaper showcasing Sylphiette (Silent Fitz) from Jobless Reincarnation with gentle ambient wind and particle effects.",
+            "description": "Immerse your iPhone in the magical atmosphere of Ranoa Academy. Featuring Sylphiette in her Silent Fitz persona from Mushoku Tensei, this dynamic wallpaper features graceful hair animation and gentle floating magical light motes. Balanced color grading ensures clock and lock-screen widget readability under all lighting conditions.",
+            "specs": {
+                "resolution": "1179 × 2556 px (Retina XDR)",
+                "fps": "60 FPS Fluid Animation",
+                "format": ".tendies (PosterBoard Bundle)",
+                "file_size": "16.4 MB",
+                "depth_effect": "Supported (Magic Layering)",
+                "aod_support": "Supported (Soft Glowing Particles)",
+                "jailbreak": "No (Apple SparseRestore)",
+                "compatibility": "iOS 17.0 – 27.0 (iPhone & iPad)"
+            },
+            "tags": ["Mushoku Tensei", "Sylphiette", "Fitz", "Anime", "Fantasy", "Live Lock Screen"]
+        }
+    ]
+
+WALLPAPERS = load_wallpapers_data()
+
 GALLERY = [
-    {"t": "g_t1", "d": "g_d1", "emoji": "\u2728"},
-    {"t": "g_t2", "d": "g_d2", "emoji": "\U0001f31f"},
-    {"t": "g_t3", "d": "g_d3", "emoji": "\U0001f680"},
-    {"t": "g_t4", "d": "g_d4", "emoji": "\U0001f9e9"},
+    {
+        "title": w["title"],
+        "img": w["img"],
+        "href": w["target_url"],
+        "slug": w["slug"],
+        "tag": w["tag"],
+    }
+    for w in WALLPAPERS
 ]
 
 NAV = [{"key": "nav_wiki", "href": "#about"}, {"key": "nav_install", "href": "#install"}, {"key": "nav_gallery", "href": "#gallery"}, {"key": "nav_faq", "href": "#faq"}]
@@ -1317,9 +1423,27 @@ def jsonld(lang, path):
         "isPartOf": {"@id": BASE_URL + "/#website"},
         "about": {"@id": BASE_URL + "/#organization"},
     }
+    howto_steps = []
+    for idx, (title_key, desc_key, num) in enumerate(STEPS):
+        howto_steps.append({
+            "@type": "HowToStep",
+            "position": idx + 1,
+            "name": t(lang, title_key),
+            "text": t(lang, desc_key),
+            "url": page_url + "#install",
+        })
+    howto = {
+        "@type": "HowTo",
+        "@id": page_url + "#howto",
+        "name": t(lang, "install_h2"),
+        "description": t(lang, "install_p"),
+        "inLanguage": lang,
+        "totalTime": "PT5M",
+        "step": howto_steps,
+    }
     data = {
         "@context": "https://schema.org",
-        "@graph": [org, website, page, {
+        "@graph": [org, website, page, howto, {
             "@type": "FAQPage",
             "@id": page_url + "#faq",
             "name": t(lang, "faq_h2"),
@@ -1471,40 +1595,40 @@ def build_page(loc):
             '</div>'
         ) % (num, t(code, title_key), t(code, desc_key))
 
-    # 精品锁屏画廊：9:16 沉浸锁屏艺术卡片
-    gallery_accents = [
-        ("from-indigo-950 via-slate-900 to-indigo-900", "text-indigo-300", "border-indigo-500/30", "Live Motion"),
-        ("from-slate-900 via-purple-950 to-slate-950", "text-purple-300", "border-purple-500/30", "Depth Effect"),
-        ("from-blue-950 via-slate-900 to-cyan-950", "text-cyan-300", "border-cyan-500/30", "4K Dynamic"),
-        ("from-zinc-900 via-slate-900 to-indigo-950", "text-emerald-300", "border-emerald-500/30", "Lockscreen FX"),
-    ]
-
+    # 精品锁屏画廊：9:16 沉浸锁屏真机壁纸卡片（使用真实动态 GIF 预览与落地页链接）
     gallery_cards = ""
     for idx, g in enumerate(GALLERY):
-        grad, tag_color, tag_border, tag_label = gallery_accents[idx % len(gallery_accents)]
+        spoke_url = BASE_URL + "/wallpapers/" + g["slug"] + "/"
         gallery_cards += (
-            '<div class="group cursor-pointer">'
-            '<div class="aspect-[9/16] rounded-3xl bg-gradient-to-b %s border border-white/10 p-4 sm:p-5 flex flex-col justify-between relative overflow-hidden group-hover:-translate-y-2 group-hover:border-indigo-400/40 group-hover:shadow-2xl group-hover:shadow-indigo-950/60 transition-all duration-300">'
-            '<div class="flex items-center justify-between text-[11px] font-mono text-white/50">'
+            '<div class="group bg-slate-900/60 border border-white/10 hover:border-indigo-400/50 rounded-3xl p-4 sm:p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-950/70">'
+            '<a href="%s" class="block aspect-[9/16] rounded-2xl bg-black relative overflow-hidden focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none">'
+            '<img src="%s" alt="%s" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" />'
+            '<div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 pointer-events-none"></div>'
+            '<div class="relative z-10 flex items-center justify-between text-[11px] font-mono text-white/90 drop-shadow p-2">'
             '<span>09:41</span>'
-            '<span class="w-14 h-4 bg-black/60 rounded-full border border-white/10"></span>'
+            '<span class="w-12 h-3.5 bg-black/70 rounded-full border border-white/10 shadow-sm"></span>'
             '<span>5G</span>'
             '</div>'
-            '<div class="my-auto text-center py-4">'
-            '<div class="text-5xl group-hover:scale-110 group-hover:rotate-6 transition-transform duration-300 mb-3">%s</div>'
-            '<span class="inline-block text-[11px] font-mono font-medium %s bg-black/50 border %s rounded-full px-3 py-1 backdrop-blur-md shadow-sm">%s</span>'
+            '<div class="absolute bottom-3 left-3 right-3 z-10 flex items-center justify-between text-xs text-white/90 drop-shadow">'
+            '<span class="inline-block text-[11px] font-mono font-medium text-indigo-200 bg-black/60 border border-indigo-400/30 rounded-full px-2.5 py-0.5 backdrop-blur-md shadow-sm">%s</span>'
+            '<span class="text-[11px] font-mono text-slate-300 bg-black/60 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-md">60 FPS</span>'
             '</div>'
-            '<div class="pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs text-white/70 group-hover:text-white transition-colors">'
-            '<span class="font-mono">.tendies file</span>'
-            '<span class="group-hover:translate-x-1 transition-transform">&rarr;</span>'
+            '</a>'
+            '<div class="mt-4 flex flex-col justify-between flex-1">'
+            '<div>'
+            '<a href="%s" class="text-white font-semibold text-sm tracking-tight hover:text-indigo-300 transition-colors line-clamp-1 block">%s</a>'
+            '<p class="text-slate-400 text-xs mt-1 leading-relaxed flex items-center gap-1.5">'
+            '<span class="w-1.5 h-1.5 rounded-full bg-indigo-400"></span>'
+            '<span>.tendies dynamic lockscreen</span>'
+            '</p>'
+            '</div>'
+            '<div class="mt-4 pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs">'
+            '<a href="%s" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1 transition-colors">Specs &amp; Guide &rarr;</a>'
+            '<a href="%s" target="_blank" rel="noopener nofollow" class="w-7 h-7 rounded-lg bg-white/10 hover:bg-indigo-600 flex items-center justify-center text-white transition-all shadow-sm" title="Download on Official Store">&nearr;</a>'
             '</div>'
             '</div>'
-            '<div class="mt-3.5 px-1">'
-            '<h3 class="text-white font-semibold text-sm tracking-tight mb-0.5">%s</h3>'
-            '<p class="text-slate-400 text-xs leading-relaxed">%s</p>'
             '</div>'
-            '</div>'
-        ) % (grad, g["emoji"], tag_color, tag_border, tag_label, t(code, g["t"]), t(code, g["d"]))
+        ) % (spoke_url, g["img"], g["title"], g["tag"], spoke_url, g["title"], spoke_url, g["href"])
 
     # FAQ 可折叠问答：精致微玻璃卡片与顺滑旋转动效
     faq_html = ""
@@ -1540,7 +1664,7 @@ def build_page(loc):
     footer_links = [
         ("foot_tw", [("foot_tw1", "#"), ("foot_tw2", "#about"), ("foot_tw3", "#tendies"), ("foot_tw4", "#install")]),
         ("foot_nw", [("foot_nw1", "https://tendieswallpaper.com/"), ("foot_nw2", "https://tendieswallpaper.com/en/wallpapers?sortBy=latest"), ("foot_nw3", "https://tendieswallpaper.com/en/wallpapers?sortBy=hot"), ("foot_nw4", TUTORIAL_URL)]),
-        ("foot_pr", [("foot_pr1", TOOL_URL), ("foot_pr2", TUTORIAL_URL), ("foot_pr3", "https://tendieswallpaper.com/en/pricing"), ("foot_pr4", "https://tendieswallpaper.com/en/orders")]),
+        ("foot_pr", [("foot_pr1", TOOL_URL), ("foot_pr2", TUTORIAL_URL), ("foot_pr3", "https://tendieswallpaper.com/en/premium"), ("foot_pr4", "https://tendieswallpaper.com/en/orders")]),
         ("foot_pol", [("foot_pol1", "https://tendieswallpaper.com/en/privacy-policy"), ("foot_pol2", "https://tendieswallpaper.com/en/terms-of-service"), ("foot_pol3", "https://tendieswallpaper.com/en/dmca-policy"), ("foot_pol4", "https://tendieswallpaper.com/en/ugc-policy")]),
     ]
     footer_cols = ""
@@ -1707,28 +1831,29 @@ tailwind.config = {{
                 <!-- 居中拟真 iOS 锁屏动态壁纸机身 -->
                 <div class="md:col-span-4 flex justify-center">
                   <div class="w-64 sm:w-72 aspect-[9/18.5] rounded-[2.5rem] p-2.5 bg-slate-900/90 border-2 border-slate-700/60 shadow-2xl shadow-indigo-950/60 relative overflow-hidden ring-1 ring-white/10 group">
-                    <div class="w-full h-full rounded-[2.1rem] overflow-hidden relative flex flex-col justify-between p-5 bg-gradient-to-b from-indigo-950 via-slate-900 to-indigo-950 border border-white/10">
+                    <div class="w-full h-full rounded-[2.1rem] overflow-hidden relative flex flex-col justify-between p-5 bg-slate-950 border border-white/10">
+                      <!-- 真实动态壁纸预览 -->
+                      <img src="https://wallpaper-oss.9527012346.xyz/nugget/previews/custom/gifs/JOJO_sbr_en.gif" alt="Dynamic Wallpaper Live Preview" class="absolute inset-0 w-full h-full object-cover object-center opacity-85 group-hover:scale-105 transition-transform duration-700 pointer-events-none will-change-transform" />
+                      <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-black/25 to-black/80 pointer-events-none"></div>
+
                       <!-- 灵动岛 (Dynamic Island) -->
-                      <div class="w-24 h-5 mx-auto bg-black rounded-full flex items-center justify-end px-2 gap-1.5 shadow-sm">
+                      <div class="relative z-10 w-24 h-5 mx-auto bg-black rounded-full flex items-center justify-end px-2 gap-1.5 shadow-sm">
                         <span class="w-2 h-2 rounded-full bg-emerald-500/80"></span>
                       </div>
                       <!-- 锁屏时钟与日期 -->
-                      <div class="text-center mt-2">
-                        <p class="text-[10px] font-medium tracking-wide uppercase text-indigo-200/80 font-mono">Monday, October 14</p>
-                        <div class="text-5xl font-extrabold tracking-tight text-white font-sans mt-0.5 tabular-nums" style="letter-spacing: -0.05em;">09:41</div>
+                      <div class="relative z-10 text-center mt-2">
+                        <p class="text-[10px] font-medium tracking-wide uppercase text-indigo-100/90 font-mono drop-shadow">Monday, October 14</p>
+                        <div class="text-5xl font-extrabold tracking-tight text-white font-sans mt-0.5 tabular-nums drop-shadow-md" style="letter-spacing: -0.05em;">09:41</div>
                       </div>
-                      <!-- 动态图层展示 -->
-                      <div class="my-auto text-center py-4">
-                        <div class="w-16 h-16 mx-auto rounded-2xl bg-indigo-500/20 border border-indigo-400/30 flex items-center justify-center text-3xl shadow-lg backdrop-blur-md group-hover:scale-110 group-hover:rotate-3 transition-transform duration-300">
-                          🌌
-                        </div>
-                        <span class="inline-block mt-3 text-[11px] font-mono font-medium text-indigo-300 bg-indigo-950/80 border border-indigo-500/30 rounded-full px-2.5 py-0.5 shadow-sm">.tendies active</span>
+                      <!-- 动态壁纸徽标 -->
+                      <div class="relative z-10 my-auto text-center py-4">
+                        <span class="inline-block text-[11px] font-mono font-medium text-indigo-200 bg-black/60 border border-indigo-400/30 rounded-full px-3 py-1 shadow-lg backdrop-blur-md">.tendies engine active</span>
                       </div>
                       <!-- 底部快捷按键 -->
-                      <div class="flex items-center justify-between px-2 text-white/70">
-                        <div class="w-9 h-9 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-xs">🔦</div>
-                        <div class="w-12 h-1 bg-white/40 rounded-full"></div>
-                        <div class="w-9 h-9 rounded-full bg-black/40 backdrop-blur-md border border-white/10 flex items-center justify-center text-xs">📷</div>
+                      <div class="relative z-10 flex items-center justify-between px-2 text-white/90">
+                        <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center text-xs">🔦</div>
+                        <div class="w-12 h-1 bg-white/50 rounded-full"></div>
+                        <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center text-xs">📷</div>
                       </div>
                     </div>
                   </div>
@@ -1792,6 +1917,61 @@ tailwind.config = {{
       </div>
     </section>
 
+    <section id="compare" class="py-20 bg-[#080a0f] border-b border-white/[0.06]">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6">
+        <div class="text-center max-w-2xl mx-auto mb-12">
+          <p class="text-indigo-400 font-semibold text-xs uppercase tracking-widest mb-3">Technical Architecture Comparison</p>
+          <h2 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold tracking-tight text-white text-balance">Why .tendies Beats Traditional Methods</h2>
+          <p class="mt-4 text-slate-400 text-sm leading-relaxed text-pretty">Comparing native PosterBoard dynamic wallpaper bundles against legacy Live Photos and risky jailbreak tweaks.</p>
+        </div>
+
+        <div class="overflow-x-auto rounded-3xl border border-white/[0.08] bg-white/[0.02] shadow-2xl">
+          <table class="w-full text-left border-collapse text-xs sm:text-sm">
+            <thead>
+              <tr class="border-b border-white/[0.08] bg-white/[0.03]">
+                <th class="p-4 sm:p-5 font-semibold text-white">Feature &amp; Metric</th>
+                <th class="p-4 sm:p-5 font-semibold text-indigo-400 bg-indigo-500/[0.06] border-x border-white/[0.08]">Tendies (.tendies + Nugget)</th>
+                <th class="p-4 sm:p-5 font-semibold text-slate-400">Apple Live Photos</th>
+                <th class="p-4 sm:p-5 font-semibold text-slate-400">Jailbreak / Dylib Injection</th>
+              </tr>
+            </thead>
+            <tbody class="divide-y divide-white/[0.06] text-slate-300">
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-white">Dynamic Lockscreen Effect</td>
+                <td class="p-4 sm:p-5 text-emerald-400 font-medium bg-indigo-500/[0.03] border-x border-white/[0.08]">True continuous native motion &amp; depth</td>
+                <td class="p-4 sm:p-5 text-slate-400">3-second press-and-hold loop only</td>
+                <td class="p-4 sm:p-5 text-slate-300">Continuous animation via hooked process</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-white">Jailbreak Required?</td>
+                <td class="p-4 sm:p-5 text-emerald-400 font-medium bg-indigo-500/[0.03] border-x border-white/[0.08]">❌ No (Apple SparseRestore / BookRestore)</td>
+                <td class="p-4 sm:p-5 text-slate-400">❌ No</td>
+                <td class="p-4 sm:p-5 text-rose-400 font-medium">✔️ Yes (Kernel / PPL bypass required)</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-white">Battery &amp; Idle Drain</td>
+                <td class="p-4 sm:p-5 text-emerald-400 font-medium bg-indigo-500/[0.03] border-x border-white/[0.08]">0% idle drain (Native Apple PosterBoard)</td>
+                <td class="p-4 sm:p-5 text-slate-400">Zero idle drain</td>
+                <td class="p-4 sm:p-5 text-amber-400">Moderate to severe background drain</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-white">Compatibility</td>
+                <td class="p-4 sm:p-5 font-mono text-white bg-indigo-500/[0.03] border-x border-white/[0.08]">iOS &amp; iPadOS 17.0 &ndash; 27 (All versions)</td>
+                <td class="p-4 sm:p-5 font-mono text-slate-400">iOS 17+ (Limited devices)</td>
+                <td class="p-4 sm:p-5 font-mono text-rose-300">Outdated iOS versions only</td>
+              </tr>
+              <tr class="hover:bg-white/[0.02] transition-colors">
+                <td class="p-4 sm:p-5 font-medium text-white">System Safety &amp; Stock Restore</td>
+                <td class="p-4 sm:p-5 text-emerald-400 font-medium bg-indigo-500/[0.03] border-x border-white/[0.08]">100% reversible anytime via iTunes/Finder</td>
+                <td class="p-4 sm:p-5 text-slate-400">Stock feature</td>
+                <td class="p-4 sm:p-5 text-rose-400">Risk of bootloops, voided warranty</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+    </section>
+
     <section id="gallery" class="py-24 bg-[#0a0d15]/60 border-b border-white/[0.06]">
       <div class="max-w-6xl mx-auto px-4 sm:px-6">
         <div class="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-6 mb-12">
@@ -1800,7 +1980,10 @@ tailwind.config = {{
             <h2 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white text-balance">{gallery_h2}</h2>
             <p class="mt-4 text-slate-400 leading-relaxed max-w-2xl text-pretty">{gallery_p}</p>
           </div>
-          <a href="{gallery_url}" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] px-6 py-3 font-semibold text-white shadow-lg shadow-indigo-600/25 transition-all duration-200 self-start sm:self-auto text-sm shrink-0">{gallery_cta} &rarr;</a>
+          <div class="flex items-center gap-3 self-start sm:self-auto shrink-0">
+            <a href="{wallpapers_hub_url}" class="inline-flex items-center gap-1.5 rounded-xl bg-white/[0.04] border border-white/10 hover:border-indigo-400/50 hover:bg-white/[0.08] px-4 py-2.5 font-medium text-slate-200 transition-all text-xs sm:text-sm">Browse Catalog &rarr;</a>
+            <a href="{gallery_url}" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] px-5 py-2.5 font-semibold text-white shadow-lg shadow-indigo-600/25 transition-all duration-200 text-xs sm:text-sm">{gallery_cta} &rarr;</a>
+          </div>
         </div>
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-5 sm:gap-6">
           {gallery_cards}
@@ -1897,7 +2080,7 @@ tailwind.config = {{
         stat3b=t(code, "stat3b"),
         gallery_url=WALL_URL,
         tutorial_url=TUTORIAL_URL,
-        pricing_url="https://tendieswallpaper.com/en/pricing",
+        pricing_url="https://tendieswallpaper.com/en/premium",
         sitemap=BASE_URL + "/sitemap.xml",
         about_tag=t(code, "about_tag"),
         about_h2=t(code, "about_h2"),
@@ -1917,6 +2100,7 @@ tailwind.config = {{
         gallery_p=t(code, "gallery_p"),
         gallery_cards=gallery_cards,
         gallery_cta=t(code, "gallery_cta"),
+        wallpapers_hub_url=BASE_URL + "/wallpapers/",
         faq_tag=t(code, "faq_tag"),
         faq_h2=t(code, "faq_h2"),
         faq_p=t(code, "faq_p"),
@@ -1939,9 +2123,672 @@ tailwind.config = {{
     return html
 
 
+# ---------------------------------------------------------------------------
+# Programmatic SEO (pSEO) Page Templates: Hub & Detail Pages
+# ---------------------------------------------------------------------------
+
+def render_base_head(title, desc, canonical, og_img=None, extra_ld=None):
+    img_tags = ""
+    if og_img:
+        img_tags = f'<meta property="og:image" content="{og_img}">\n<meta name="twitter:image" content="{og_img}">'
+    ld_script = ""
+    if extra_ld:
+        ld_script = f'<script type="application/ld+json">\n{json.dumps(extra_ld, ensure_ascii=False, indent=2)}\n</script>'
+
+    return f"""<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{title}</title>
+<meta name="description" content="{desc}">
+<meta name="robots" content="index, follow, max-image-preview:large">
+<link rel="canonical" href="{canonical}">
+<link rel="alternate" hreflang="en" href="{canonical}">
+<link rel="alternate" hreflang="x-default" href="{canonical}">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Tendies Wallpaper">
+<meta property="og:title" content="{title}">
+<meta property="og:description" content="{desc}">
+<meta property="og:url" content="{canonical}">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="{title}">
+<meta name="twitter:description" content="{desc}">
+{img_tags}
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+{ld_script}
+{TRACKING}
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+tailwind.config = {{
+  theme: {{
+    extend: {{
+      colors: {{
+        dark: {{ 950: '#07090e', 900: '#0c0f17', 850: '#111622', 800: '#182030' }},
+        brand: {{ 50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc', 400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca', 800: '#3730a3', 900: '#312e81' }}
+      }},
+      fontFamily: {{
+        sans: ['"Plus Jakarta Sans"', 'Inter', 'system-ui', '-apple-system', 'sans-serif'],
+        mono: ['"JetBrains Mono"', 'ui-monospace', 'monospace']
+      }}
+    }}
+  }}
+}};
+</script>
+<style>
+  html {{ scroll-behavior: smooth; }}
+  body {{
+    font-family: 'Plus Jakarta Sans', Inter, system-ui, -apple-system, sans-serif;
+    background-color: #07090e;
+    font-feature-settings: 'cv02', 'cv03', 'cv04', 'cv11';
+  }}
+  .tabular-nums {{ font-variant-numeric: tabular-nums; }}
+  details summary::-webkit-details-marker {{ display: none; }}
+  .noise-bg {{
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.8' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='0.02'/%3E%3C/svg%3E");
+  }}
+</style>
+</head>"""
+
+
+def render_site_nav(active_page="wallpapers"):
+    home_url = BASE_URL + "/"
+    hub_url = BASE_URL + "/wallpapers/"
+    return f"""<header>
+    <nav class="sticky top-0 z-50 backdrop-blur-xl bg-[#07090e]/85 border-b border-white/[0.08] transition-all">
+      <div class="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
+        <a href="{home_url}" class="group flex items-center gap-2.5 font-bold text-lg tracking-tight text-white focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none rounded-lg p-1">
+          <span class="w-8 h-8 rounded-xl bg-indigo-500/15 border border-indigo-400/30 text-indigo-400 flex items-center justify-center text-sm shadow-[inset_0_1px_0_0_rgba(255,255,255,0.2)] group-hover:scale-105 group-hover:border-indigo-400/60 transition-all">📱</span>
+          <span>Tendies <span class="text-indigo-400 font-semibold">Wallpaper</span></span>
+        </a>
+        <div class="hidden md:flex items-center gap-8 text-sm">
+          <ul class="flex items-center gap-6">
+            <li><a href="{home_url}" class="text-slate-300 hover:text-white transition-colors">Home</a></li>
+            <li><a href="{home_url}#about" class="text-slate-300 hover:text-white transition-colors">What is it</a></li>
+            <li><a href="{home_url}#tendies" class="text-slate-300 hover:text-white transition-colors">.tendies file</a></li>
+            <li><a href="{home_url}#install" class="text-slate-300 hover:text-white transition-colors">Install</a></li>
+            <li><a href="{hub_url}" class="text-indigo-400 font-semibold">Wallpapers</a></li>
+            <li><a href="{home_url}#faq" class="text-slate-300 hover:text-white transition-colors">FAQ</a></li>
+          </ul>
+          <a href="https://tendieswallpaper.com/" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] px-4 py-2 text-sm font-semibold text-white shadow-lg shadow-indigo-600/25 transition-all duration-200 focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none">Official Store &rarr;</a>
+        </div>
+        <div class="flex items-center gap-2 md:hidden">
+          <a href="{hub_url}" class="rounded-lg bg-white/10 px-3 py-1.5 text-xs font-semibold text-white">Catalog</a>
+          <a href="https://tendieswallpaper.com/" target="_blank" rel="noopener nofollow" class="rounded-lg bg-indigo-600 px-3 py-1.5 text-xs font-semibold text-white">Store</a>
+        </div>
+      </div>
+    </nav>
+  </header>"""
+
+
+def render_site_footer():
+    home_url = BASE_URL + "/"
+    hub_url = BASE_URL + "/wallpapers/"
+    return f"""<footer class="bg-[#05070b] border-t border-white/[0.08] pt-16 pb-12 mt-20">
+    <div class="max-w-6xl mx-auto px-4 sm:px-6">
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-8 pb-12 text-sm">
+        <div>
+          <h4 class="text-white font-semibold mb-4">Tendies Wallpaper</h4>
+          <ul class="space-y-2.5 text-slate-400">
+            <li><a href="{home_url}" class="hover:text-white transition-colors">Home</a></li>
+            <li><a href="{hub_url}" class="hover:text-white transition-colors">Wallpapers Directory</a></li>
+            <li><a href="{home_url}#tendies" class="hover:text-white transition-colors">The .tendies format</a></li>
+            <li><a href="{home_url}#install" class="hover:text-white transition-colors">How to Install</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Curated Wallpapers</h4>
+          <ul class="space-y-2.5 text-slate-400">
+            <li><a href="{BASE_URL}/wallpapers/steel-ball-run-jojo-spin-spin/" class="hover:text-white transition-colors">Steel Ball Run (JoJo)</a></li>
+            <li><a href="{BASE_URL}/wallpapers/my-dress-up-darling-marin-six-shots/" class="hover:text-white transition-colors">Marin Kitagawa (Darling)</a></li>
+            <li><a href="{BASE_URL}/wallpapers/f1-hamilton-sunglasses/" class="hover:text-white transition-colors">Lewis Hamilton F1</a></li>
+            <li><a href="{BASE_URL}/wallpapers/mushoku-tensei-sylphiette-fitz/" class="hover:text-white transition-colors">Sylphiette (Jobless)</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">Ecosystem &amp; Tools</h4>
+          <ul class="space-y-2.5 text-slate-400">
+            <li><a href="https://tendieswallpaper.com/" target="_blank" rel="noopener nofollow" class="hover:text-white transition-colors">Nugget Wallpaper Store</a></li>
+            <li><a href="https://nugget.host/en/tutorial/nugget" target="_blank" rel="noopener nofollow" class="hover:text-white transition-colors">Nugget Install Tutorial</a></li>
+            <li><a href="https://nugget.host/" target="_blank" rel="noopener nofollow" class="hover:text-white transition-colors">Nugget iOS Tool</a></li>
+            <li><a href="https://tendieswallpaper.com/en/premium" target="_blank" rel="noopener nofollow" class="hover:text-white transition-colors">Premium Membership</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-white font-semibold mb-4">System Compatibility</h4>
+          <ul class="space-y-2.5 text-slate-400">
+            <li><span class="text-slate-300">iOS &amp; iPadOS 17 &ndash; 27</span></li>
+            <li><span class="text-slate-300">Apple PosterBoard Engine</span></li>
+            <li><span class="text-emerald-400">No Jailbreak Required</span></li>
+            <li><span class="text-slate-300">Reversible SparseRestore</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="pt-8 border-t border-white/[0.06] text-slate-500 text-xs sm:text-sm leading-relaxed flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div class="max-w-2xl">Tendies Wallpaper is an informational index and directory for .tendies lock screen wallpaper bundles. All trademarks belong to their respective owners.</div>
+        <div class="shrink-0 text-slate-500">&copy; 2026 Tendies Wallpaper &middot; <a href="{BASE_URL}/sitemap.xml" class="hover:text-white underline">XML Sitemap</a></div>
+      </div>
+    </div>
+  </footer>"""
+
+
+def build_wallpapers_hub(wallpapers):
+    page_url = BASE_URL + "/wallpapers/"
+    home_url = BASE_URL + "/"
+    title = "Tendies Wallpapers Library — 60 FPS Dynamic iOS Lock Screens"
+    desc = "Browse curated 60 FPS .tendies dynamic lock screen wallpapers for iPhone & iPad on iOS 17–27. Anime, sports, and motion wallpapers for Nugget without jailbreak."
+
+    # 构建卡片
+    cards_html = ""
+    for w in wallpapers:
+        spoke_url = BASE_URL + "/wallpapers/" + w["slug"] + "/"
+        cards_html += f"""
+        <div class="group bg-slate-900/60 border border-white/10 hover:border-indigo-400/50 rounded-3xl p-5 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl hover:shadow-indigo-950/70">
+          <a href="{spoke_url}" class="block aspect-[9/16] rounded-2xl bg-black relative overflow-hidden focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none">
+            <img src="{w['img']}" alt="{w['title']}" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 pointer-events-none"></div>
+            <div class="relative z-10 flex items-center justify-between text-[11px] font-mono text-white/90 drop-shadow p-2">
+              <span>09:41</span>
+              <span class="w-12 h-3.5 bg-black/70 rounded-full border border-white/10 shadow-sm"></span>
+              <span>5G</span>
+            </div>
+            <div class="absolute bottom-3 left-3 right-3 z-10 flex items-center justify-between text-xs text-white/90 drop-shadow">
+              <span class="inline-block text-[11px] font-mono font-medium text-indigo-200 bg-black/60 border border-indigo-400/30 rounded-full px-2.5 py-0.5 backdrop-blur-md shadow-sm">{w['tag']}</span>
+              <span class="text-[11px] font-mono text-slate-300 bg-black/60 border border-white/10 rounded-full px-2 py-0.5 backdrop-blur-md">60 FPS</span>
+            </div>
+          </a>
+          <div class="mt-5 flex flex-col justify-between flex-1">
+            <div>
+              <a href="{spoke_url}" class="text-white font-semibold text-base tracking-tight hover:text-indigo-300 transition-colors line-clamp-1 block">{w['title']}</a>
+              <p class="text-slate-400 text-xs mt-2 leading-relaxed line-clamp-2">{w['summary']}</p>
+            </div>
+            <div class="mt-5 pt-3 border-t border-white/[0.08] flex items-center justify-between text-xs">
+              <a href="{spoke_url}" class="text-indigo-400 hover:text-indigo-300 font-medium inline-flex items-center gap-1 transition-colors">Specifications &rarr;</a>
+              <a href="{w['target_url']}" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-1 px-3 py-1.5 rounded-lg bg-indigo-600/30 hover:bg-indigo-600 border border-indigo-400/30 hover:border-indigo-400 text-white font-medium transition-all shadow-sm">Get .tendies &nearr;</a>
+            </div>
+          </div>
+        </div>
+        """
+
+    # Schema.org JSON-LD
+    item_list = []
+    for idx, w in enumerate(wallpapers):
+        item_list.append({
+            "@type": "ListItem",
+            "position": idx + 1,
+            "url": BASE_URL + "/wallpapers/" + w["slug"] + "/",
+            "name": w["title"]
+        })
+    jsonld_data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "CollectionPage",
+                "@id": page_url + "#webpage",
+                "url": page_url,
+                "name": title,
+                "description": desc,
+                "inLanguage": "en",
+                "isPartOf": {"@id": BASE_URL + "/#website"},
+                "breadcrumb": {"@id": page_url + "#breadcrumb"},
+                "mainEntity": {
+                    "@type": "ItemList",
+                    "itemListElement": item_list
+                }
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": page_url + "#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": home_url
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Wallpapers",
+                        "item": page_url
+                    }
+                ]
+            }
+        ]
+    }
+
+    head_html = render_base_head(title, desc, page_url, extra_ld=jsonld_data)
+    nav_html = render_site_nav("wallpapers")
+    footer_html = render_site_footer()
+
+    return f"""<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{head_html}
+<body class="bg-[#07090e] text-slate-100 antialiased selection:bg-indigo-500/40 relative min-h-screen noise-bg">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[100] px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-lg font-medium text-xs">Skip to content</a>
+  {nav_html}
+
+  <main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <!-- 面包屑导航 -->
+    <nav class="text-xs font-mono text-slate-400 flex items-center gap-2 mb-8">
+      <a href="{home_url}" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <span class="text-indigo-400">Wallpapers</span>
+    </nav>
+
+    <!-- Header 区域 -->
+    <div class="max-w-3xl mb-12">
+      <div class="inline-flex items-center gap-2 text-xs font-medium text-indigo-300 bg-indigo-500/10 border border-indigo-500/20 rounded-full px-3.5 py-1.5 mb-6 shadow-sm">
+        <span class="w-1.5 h-1.5 rounded-full bg-indigo-400 animate-pulse"></span>
+        <span>Curated .tendies Catalog</span>
+      </div>
+      <h1 class="text-3xl sm:text-5xl font-extrabold tracking-tight text-white leading-tight">
+        Dynamic iOS Lock Screen Wallpapers
+      </h1>
+      <p class="mt-4 text-slate-300/80 text-base sm:text-lg leading-relaxed">
+        Ultra-high-definition 60 FPS animated lock screens for Nugget. Zero background battery drain, native PosterBoard layer integration on iOS 17 through 27 without jailbreak.
+      </p>
+
+      <!-- 分类筛选胶囊 -->
+      <div class="flex flex-wrap items-center gap-2.5 mt-8 text-xs font-mono">
+        <span class="px-3.5 py-1.5 rounded-xl bg-indigo-600 text-white font-semibold shadow-md shadow-indigo-600/30">All Wallpapers (4)</span>
+        <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-slate-300">Anime &amp; Manga (3)</span>
+        <span class="px-3.5 py-1.5 rounded-xl bg-white/[0.04] border border-white/10 text-slate-300">Sports &amp; F1 (1)</span>
+      </div>
+    </div>
+
+    <!-- 壁纸网格 -->
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+      {cards_html}
+    </div>
+
+    <!-- 技术架构优势 Bento 模块 -->
+    <section class="mt-24 pt-16 border-t border-white/[0.08]">
+      <div class="text-center max-w-2xl mx-auto mb-12">
+        <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">Why .tendies Dynamic Wallpapers?</h2>
+        <p class="text-slate-400 text-sm mt-3 leading-relaxed">Unlike battery-heavy video apps or 3-second Live Photos, .tendies files are native system assets that execute directly through Apple's PosterBoard daemon.</p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] hover:border-indigo-500/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 font-mono font-bold text-sm mb-4">60</div>
+          <h3 class="text-white font-semibold text-base mb-2">60 FPS Fluid ProMotion</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Engineered specifically for iPhone Super Retina XDR displays with buttery-smooth refresh rates.</p>
+        </div>
+        <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] hover:border-indigo-500/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 font-mono font-bold text-sm mb-4">0%</div>
+          <h3 class="text-white font-semibold text-base mb-2">Zero Idle Battery Drain</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Suspends seamlessly when locked or standby mode activates. No background processes or battery drain.</p>
+        </div>
+        <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] hover:border-indigo-500/30 transition-all">
+          <div class="w-10 h-10 rounded-xl bg-indigo-500/10 border border-indigo-400/20 flex items-center justify-center text-indigo-400 font-mono font-bold text-sm mb-4">&check;</div>
+          <h3 class="text-white font-semibold text-base mb-2">100% Stock &amp; Reversible</h3>
+          <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">No kernel patching or jailbreak required. Revert anytime via iTunes or Finder with zero risk.</p>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  {footer_html}
+</body>
+</html>"""
+
+
+def build_wallpaper_detail(item, all_items):
+    slug = item["slug"]
+    page_url = BASE_URL + "/wallpapers/" + slug + "/"
+    home_url = BASE_URL + "/"
+    hub_url = BASE_URL + "/wallpapers/"
+    title = item.get("seo_title") or f"{item['title']} — Dynamic Wallpaper (.tendies)"
+    desc = item.get("seo_desc") or f"Download {item['title']} dynamic .tendies wallpaper for iOS 17-26. 60 FPS fluid lock screen motion via Nugget."
+
+    # 相关推荐（排除自身）
+    related_items = [w for w in all_items if w["slug"] != slug][:4]
+    related_html = ""
+    for r in related_items:
+        r_url = BASE_URL + "/wallpapers/" + r["slug"] + "/"
+        related_html += f"""
+        <div class="group bg-slate-900/60 border border-white/10 hover:border-indigo-400/50 rounded-3xl p-4 flex flex-col justify-between transition-all duration-300 hover:-translate-y-1.5 hover:shadow-xl hover:shadow-indigo-950/50">
+          <a href="{r_url}" class="block aspect-[9/16] rounded-2xl bg-black relative overflow-hidden focus-visible:ring-2 focus-visible:ring-indigo-400 focus-visible:outline-none">
+            <img src="{r['img']}" alt="{r['title']}" loading="lazy" class="absolute inset-0 w-full h-full object-cover object-center group-hover:scale-105 transition-transform duration-500 will-change-transform" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/70 via-transparent to-black/80 pointer-events-none"></div>
+            <div class="relative z-10 flex items-center justify-between text-[10px] font-mono text-white/90 drop-shadow p-2">
+              <span>09:41</span>
+              <span class="w-10 h-3 bg-black/70 rounded-full border border-white/10 shadow-sm"></span>
+              <span>5G</span>
+            </div>
+            <div class="absolute bottom-2.5 left-2.5 right-2.5 z-10 flex items-center justify-between text-[11px] text-white/90 drop-shadow">
+              <span class="inline-block font-mono font-medium text-indigo-200 bg-black/60 border border-indigo-400/30 rounded-full px-2 py-0.5 backdrop-blur-md">{r['tag']}</span>
+            </div>
+          </a>
+          <div class="mt-3.5">
+            <a href="{r_url}" class="text-white font-semibold text-sm tracking-tight hover:text-indigo-300 transition-colors line-clamp-1 block">{r['title']}</a>
+            <div class="mt-3 pt-2.5 border-t border-white/[0.08] flex items-center justify-between text-xs">
+              <a href="{r_url}" class="text-indigo-400 hover:text-indigo-300 font-medium">Specs &amp; Details &rarr;</a>
+              <a href="{r['target_url']}" target="_blank" rel="noopener nofollow" class="text-slate-400 hover:text-white" title="Get .tendies">&nearr;</a>
+            </div>
+          </div>
+        </div>
+        """
+
+    # Schema.org JSON-LD
+    jsonld_data = {
+        "@context": "https://schema.org",
+        "@graph": [
+            {
+                "@type": "WebPage",
+                "@id": page_url + "#webpage",
+                "url": page_url,
+                "name": title,
+                "description": desc,
+                "inLanguage": "en",
+                "isPartOf": {"@id": BASE_URL + "/#website"},
+                "breadcrumb": {"@id": page_url + "#breadcrumb"},
+                "primaryImageOfPage": {"@id": page_url + "#primaryimage"}
+            },
+            {
+                "@type": "ImageObject",
+                "@id": page_url + "#primaryimage",
+                "url": item["img"],
+                "contentUrl": item["img"],
+                "caption": item["title"] + " iOS Lock Screen Wallpaper Preview",
+                "width": 1179,
+                "height": 2556
+            },
+            {
+                "@type": "BreadcrumbList",
+                "@id": page_url + "#breadcrumb",
+                "itemListElement": [
+                    {
+                        "@type": "ListItem",
+                        "position": 1,
+                        "name": "Home",
+                        "item": home_url
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 2,
+                        "name": "Wallpapers",
+                        "item": hub_url
+                    },
+                    {
+                        "@type": "ListItem",
+                        "position": 3,
+                        "name": item["title"],
+                        "item": page_url
+                    }
+                ]
+            },
+            {
+                "@type": "Product",
+                "@id": page_url + "#product",
+                "name": item["title"] + " .tendies Dynamic Wallpaper",
+                "description": item["description"],
+                "image": item["img"],
+                "category": item["category"],
+                "brand": {
+                    "@type": "Brand",
+                    "name": "Tendies Wallpaper"
+                },
+                "offers": {
+                    "@type": "Offer",
+                    "url": item["target_url"],
+                    "price": "0.00",
+                    "priceCurrency": "USD",
+                    "availability": "https://schema.org/InStock"
+                }
+            },
+            {
+                "@type": "HowTo",
+                "@id": page_url + "#howto",
+                "name": f"How to Install {item['title']} on iOS 17–27",
+                "description": f"Step-by-step instructions to install {item['title']} dynamic .tendies wallpaper using Nugget.",
+                "totalTime": "PT5M",
+                "step": [
+                    {
+                        "@type": "HowToStep",
+                        "position": 1,
+                        "name": "Download the .tendies file",
+                        "text": f"Download the {item['title']} .tendies file bundle from the official library.",
+                        "url": page_url + "#install-guide"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 2,
+                        "name": "Connect your iOS device",
+                        "text": "Connect your iPhone or iPad to your PC or Mac via USB and trust the computer.",
+                        "url": page_url + "#install-guide"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 3,
+                        "name": "Apply with Nugget PosterBoard",
+                        "text": "Open the Nugget tool, select PosterBoard, import the file and hit Apply Changes.",
+                        "url": page_url + "#install-guide"
+                    },
+                    {
+                        "@type": "HowToStep",
+                        "position": 4,
+                        "name": "Reboot and Apply on Lock Screen",
+                        "text": "After device restart, long-press the lock screen, tap Customize and select the wallpaper from Collections.",
+                        "url": page_url + "#install-guide"
+                    }
+                ]
+            }
+        ]
+    }
+
+    head_html = render_base_head(title, desc, page_url, og_img=item["img"], extra_ld=jsonld_data)
+    nav_html = render_site_nav("wallpapers")
+    footer_html = render_site_footer()
+
+    # 规格指标项
+    specs = item.get("specs", {})
+    specs_cards = f"""
+    <div class="grid grid-cols-2 sm:grid-cols-4 gap-3.5">
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Resolution</div>
+        <div class="mt-1 text-sm font-semibold text-white">{specs.get('resolution', '1179 × 2556 px')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Frame Rate</div>
+        <div class="mt-1 text-sm font-semibold text-indigo-300">{specs.get('fps', '60 FPS')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Package Format</div>
+        <div class="mt-1 text-sm font-semibold text-white">{specs.get('format', '.tendies')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">File Size</div>
+        <div class="mt-1 text-sm font-semibold text-white">{specs.get('file_size', '14 MB')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Depth Effect</div>
+        <div class="mt-1 text-sm font-semibold text-emerald-400">{specs.get('depth_effect', 'Supported')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Always-On (AOD)</div>
+        <div class="mt-1 text-sm font-semibold text-white">{specs.get('aod_support', 'Supported')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Jailbreak?</div>
+        <div class="mt-1 text-sm font-semibold text-emerald-400">{specs.get('jailbreak', 'No')}</div>
+      </div>
+      <div class="p-4 rounded-2xl bg-white/[0.03] border border-white/[0.08]">
+        <div class="text-[11px] font-mono text-slate-400">Compatibility</div>
+        <div class="mt-1 text-sm font-semibold text-white">{specs.get('compatibility', 'iOS 17–27')}</div>
+      </div>
+    </div>
+    """
+
+    return f"""<!DOCTYPE html>
+<html lang="en" dir="ltr">
+{head_html}
+<body class="bg-[#07090e] text-slate-100 antialiased selection:bg-indigo-500/40 relative min-h-screen noise-bg">
+  <a href="#main-content" class="sr-only focus:not-sr-only focus:fixed focus:top-4 focus:left-4 z-[100] px-4 py-2 bg-indigo-600 text-white rounded-xl shadow-lg font-medium text-xs">Skip to content</a>
+  {nav_html}
+
+  <main id="main-content" class="max-w-6xl mx-auto px-4 sm:px-6 py-10 sm:py-14">
+    <!-- 面包屑导航 -->
+    <nav class="text-xs font-mono text-slate-400 flex items-center gap-2 mb-8">
+      <a href="{home_url}" class="hover:text-white transition-colors">Home</a>
+      <span>/</span>
+      <a href="{hub_url}" class="hover:text-white transition-colors">Wallpapers</a>
+      <span>/</span>
+      <span class="text-indigo-400 truncate max-w-xs">{item['title']}</span>
+    </nav>
+
+    <!-- 核心详情区：左侧真机预览 + 右侧参数与 CTA -->
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10 lg:gap-14 items-center">
+      <!-- 左侧：iPhone 锁屏真机预览模型 -->
+      <div class="lg:col-span-5 flex flex-col items-center">
+        <div class="w-[280px] sm:w-[320px] aspect-[9/19] rounded-[48px] border-[5px] border-slate-700/80 p-3 bg-black shadow-2xl relative overflow-hidden ring-1 ring-white/15">
+          <div class="w-full h-full rounded-[40px] overflow-hidden relative flex flex-col justify-between">
+            <!-- 真实动图背景 -->
+            <img src="{item['img']}" alt="{item['title']}" class="absolute inset-0 w-full h-full object-cover object-center" />
+            <div class="absolute inset-0 bg-gradient-to-b from-black/60 via-transparent to-black/75 pointer-events-none"></div>
+
+            <!-- 顶部状态栏 -->
+            <div class="relative z-10 flex items-center justify-between px-3 pt-2 text-[11px] font-mono text-white/90 drop-shadow">
+              <span>09:41</span>
+              <span class="w-16 h-4 bg-black/80 rounded-full border border-white/10 shadow-sm"></span>
+              <span>5G</span>
+            </div>
+
+            <!-- 锁屏时钟 -->
+            <div class="relative z-10 text-center mt-6">
+              <div class="text-[12px] font-medium text-white/90 drop-shadow">Wednesday, September 16</div>
+              <div class="text-6xl font-bold tracking-tight text-white font-sans drop-shadow-lg">09:41</div>
+            </div>
+
+            <!-- 动态壁纸标识 -->
+            <div class="relative z-10 my-auto text-center py-4">
+              <span class="inline-block text-[11px] font-mono font-medium text-indigo-200 bg-black/60 border border-indigo-400/30 rounded-full px-3 py-1 shadow-lg backdrop-blur-md">.tendies engine active</span>
+            </div>
+
+            <!-- 底部快捷按键与 Home 条 -->
+            <div class="relative z-10 pb-2">
+              <div class="flex items-center justify-between px-3 text-white/90 mb-3">
+                <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center text-xs">🔦</div>
+                <div class="w-9 h-9 rounded-full bg-black/50 backdrop-blur-md border border-white/20 flex items-center justify-center text-xs">📷</div>
+              </div>
+              <div class="w-28 h-1 bg-white/50 rounded-full mx-auto"></div>
+            </div>
+          </div>
+        </div>
+        <div class="mt-4 text-xs font-mono text-slate-400 flex items-center gap-1.5">
+          <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+          <span>Native 60 FPS Lock Screen Simulation</span>
+        </div>
+      </div>
+
+      <!-- 右侧：元数据、参数矩阵与 CTA -->
+      <div class="lg:col-span-7 space-y-6">
+        <div class="flex flex-wrap items-center gap-2">
+          <span class="px-3 py-1 bg-indigo-500/10 border border-indigo-400/30 text-indigo-300 rounded-full text-xs font-mono font-medium">{item['category']}</span>
+          <span class="px-3 py-1 bg-white/[0.04] border border-white/10 text-slate-300 rounded-full text-xs font-mono">60 FPS Motion</span>
+          <span class="px-3 py-1 bg-emerald-500/10 border border-emerald-400/30 text-emerald-300 rounded-full text-xs font-mono">No Jailbreak</span>
+        </div>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight text-white leading-tight">
+          {item['title']}
+        </h1>
+
+        <p class="text-slate-300 text-base sm:text-lg leading-relaxed text-pretty">
+          {item['description']}
+        </p>
+
+        <!-- 行动召唤组 -->
+        <div class="pt-2 flex flex-wrap items-center gap-4">
+          <a href="{item['target_url']}" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-2 rounded-xl bg-indigo-600 hover:bg-indigo-500 active:scale-[0.98] px-7 py-3.5 font-semibold text-white shadow-lg shadow-indigo-600/30 transition-all duration-200 text-sm sm:text-base">
+            Get .tendies on Official Store &rarr;
+          </a>
+          <a href="#install-guide" class="inline-flex items-center gap-2 rounded-xl bg-white/[0.05] border border-white/10 hover:bg-white/[0.08] hover:border-white/20 active:scale-[0.98] px-5 py-3.5 font-medium text-slate-200 transition-all duration-200 text-sm sm:text-base">
+            How to Install
+          </a>
+        </div>
+
+        <!-- 规格矩阵表格 -->
+        <div class="pt-4">
+          <h2 class="text-xs font-mono text-slate-400 uppercase tracking-wider font-semibold mb-3">Technical Specifications</h2>
+          {specs_cards}
+        </div>
+      </div>
+    </div>
+
+    <!-- 安装指导模块 -->
+    <section id="install-guide" class="mt-24 pt-16 border-t border-white/[0.08]">
+      <div class="max-w-3xl mx-auto">
+        <div class="text-center mb-12">
+          <p class="text-indigo-400 font-semibold text-xs uppercase tracking-widest mb-2">Step-by-Step Guide</p>
+          <h2 class="text-2xl sm:text-3xl font-bold tracking-tight text-white">How to Install {item['title']}</h2>
+          <p class="text-slate-400 text-sm mt-2">Applied using Apple's SparseRestore protocol via the free Nugget tool. Takes under 3 minutes.</p>
+        </div>
+
+        <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+          <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-sm">01</span>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-1">Get the .tendies file</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Download the dynamic wallpaper bundle package from the official repository.</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-sm">02</span>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-1">Connect your iPhone / iPad</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Plug your device into your computer (macOS/Windows) via USB and confirm "Trust This Computer".</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-sm">03</span>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-1">Import in Nugget</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">Open Nugget, select PosterBoard &rarr; Import .tendies file, then click "Apply Changes".</p>
+            </div>
+          </div>
+          <div class="p-6 rounded-3xl bg-white/[0.03] border border-white/[0.08] flex gap-4">
+            <span class="w-10 h-10 shrink-0 rounded-xl bg-indigo-500/10 border border-indigo-400/20 text-indigo-400 flex items-center justify-center font-mono font-bold text-sm">04</span>
+            <div>
+              <h3 class="text-white font-semibold text-base mb-1">Reboot &amp; Select</h3>
+              <p class="text-slate-400 text-xs sm:text-sm leading-relaxed">After your device restarts, long-press your lock screen and find this wallpaper under Collections.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="mt-8 text-center">
+          <a href="https://nugget.host/en/tutorial/nugget" target="_blank" rel="noopener nofollow" class="inline-flex items-center gap-1.5 text-xs font-mono text-indigo-400 hover:text-indigo-300 transition-colors">
+            Read complete Nugget PosterBoard documentation &rarr;
+          </a>
+        </div>
+      </div>
+    </section>
+
+    <!-- 相关壁纸横向互链 -->
+    <section class="mt-24 pt-16 border-t border-white/[0.08]">
+      <div class="flex items-center justify-between mb-8">
+        <div>
+          <h2 class="text-xl sm:text-2xl font-bold tracking-tight text-white">More Curated Dynamic Wallpapers</h2>
+          <p class="text-slate-400 text-xs sm:text-sm mt-1">Explore other 60 FPS motion lock screens in this series.</p>
+        </div>
+        <a href="{hub_url}" class="text-xs font-mono text-indigo-400 hover:text-indigo-300 transition-colors">Browse all &rarr;</a>
+      </div>
+      <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-5">
+        {related_html}
+      </div>
+    </section>
+  </main>
+
+  {footer_html}
+</body>
+</html>"""
+
+
 def main():
     here = os.path.dirname(os.path.abspath(__file__))
     urls = []
+
+    # 1. 生成多语言首页
     for loc in LOCALES:
         page = build_page(loc)
         out_dir = here if loc["code"] == "en" else os.path.join(here, loc["path"].strip("/"))
@@ -1951,11 +2798,60 @@ def main():
         urls.append(BASE_URL + (loc["path"] if loc["code"] != "en" else "/"))
         print("wrote", os.path.join(out_dir, "index.html"))
 
+    # 2. 生成 Programmatic SEO: Wallpapers Hub 目录页
+    wallpapers_hub_html = build_wallpapers_hub(WALLPAPERS)
+    hub_dir = os.path.join(here, "wallpapers")
+    os.makedirs(hub_dir, exist_ok=True)
+    with open(os.path.join(hub_dir, "index.html"), "w", encoding="utf-8") as fp:
+        fp.write(wallpapers_hub_html)
+    urls.append(BASE_URL + "/wallpapers/")
+    print("wrote", os.path.join(hub_dir, "index.html"))
+
+    # 3. 生成 Programmatic SEO: 各壁纸 Spoke 独立落地页
+    for item in WALLPAPERS:
+        detail_html = build_wallpaper_detail(item, WALLPAPERS)
+        item_dir = os.path.join(hub_dir, item["slug"])
+        os.makedirs(item_dir, exist_ok=True)
+        with open(os.path.join(item_dir, "index.html"), "w", encoding="utf-8") as fp:
+            fp.write(detail_html)
+        urls.append(BASE_URL + "/wallpapers/" + item["slug"] + "/")
+        print("wrote", os.path.join(item_dir, "index.html"))
+
+    # 4. 生成 AI-SEO llms.txt
+    llms_txt = (
+        "# Tendies Wallpaper\n\n"
+        "> Tendies Wallpaper is a curated collection of dynamic, animated lock-screen wallpapers for iPhone and iPad, installed via the open-source Nugget tool with a .tendies file format. No jailbreak is required, supporting iOS & iPadOS 17 through 27.\n\n"
+        "## Core Overview\n"
+        "- Official Project: https://tendieswallpaper.github.io/\n"
+        "- Official Wallpaper Library: https://tendieswallpaper.com/\n"
+        "- Tutorial & Guide: https://nugget.host/en/tutorial/nugget\n"
+        "- Open-Source Tool: https://nugget.host/ (by leminlimez)\n"
+        "- Package Format: .tendies (Apple PosterBoard restore bundle)\n"
+        "- System Compatibility: iOS 17 – 27, iPadOS 17 – 27\n"
+        "- Jailbreak Requirement: None (Safe restore via Apple SparseRestore / BookRestore protocols)\n\n"
+        "## Key Resources & Wallpapers Catalog\n"
+        "- [Wallpapers Hub Directory](https://tendieswallpaper.github.io/wallpapers/): Complete index of 60 FPS animated .tendies files.\n"
+        "- [Steel Ball Run JoJo Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/steel-ball-run-jojo-spin-spin/)\n"
+        "- [My Dress-Up Darling Marin Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/my-dress-up-darling-marin-six-shots/)\n"
+        "- [Lewis Hamilton F1 Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/f1-hamilton-sunglasses/)\n"
+        "- [Mushoku Tensei Sylphiette Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/mushoku-tensei-sylphiette-fitz/)\n"
+        "- [Step-by-Step Installation](https://nugget.host/en/tutorial/nugget): Complete guide to install .tendies wallpapers using Nugget.\n"
+        "- [Pricing & Access](https://tendieswallpaper.com/en/premium): Free and premium membership options.\n\n"
+        "## Technical Architecture\n"
+        "A `.tendies` file contains Apple PosterBoard lock screen descriptors:\n"
+        "1. posterboard: Native container files, asset catalogs, and wallpaper IDs.\n"
+        "2. descriptors: Randomized UUID plist entries restoring directly into Collections / Favorites.\n"
+        "3. suggested / mercury: Video and motion layers targeting native PosterBoard processes with 0% idle battery drain.\n"
+    )
+    with open(os.path.join(here, "llms.txt"), "w", encoding="utf-8") as fp:
+        fp.write(llms_txt)
+
+    # 5. 生成 robots.txt
     robots = (
         "User-agent: *\n"
         "Allow: /\n"
         "\n"
-        "# AI search engines (GEO)\n"
+        "# AI search engines (GEO / AI SEO)\n"
         "User-agent: PerplexityBot\n"
         "Allow: /\n"
         "\n"
@@ -1985,17 +2881,21 @@ def main():
     with open(os.path.join(here, "robots.txt"), "w", encoding="utf-8") as fp:
         fp.write(robots)
 
+    # 6. 生成 sitemap.xml
+    sitemap_urls = list(urls) + [BASE_URL + "/llms.txt"]
     sitemap = '<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
-    for u in urls:
-        sitemap += "  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>0.9</priority></url>\n" % (u, NOW)
+    for u in sitemap_urls:
+        priority = "1.0" if u == (BASE_URL + "/") else ("0.9" if "/wallpapers/" in u else "0.8")
+        sitemap += "  <url><loc>%s</loc><lastmod>%s</lastmod><changefreq>weekly</changefreq><priority>%s</priority></url>\n" % (u, NOW, priority)
     sitemap += "</urlset>\n"
     with open(os.path.join(here, "sitemap.xml"), "w", encoding="utf-8") as fp:
         fp.write(sitemap)
 
     with open(os.path.join(here, ".nojekyll"), "w", encoding="utf-8") as fp:
         fp.write("")
-    print("wrote robots.txt, sitemap.xml, .nojekyll")
+    print("wrote robots.txt, sitemap.xml, llms.txt, .nojekyll")
 
 
 if __name__ == "__main__":
     main()
+

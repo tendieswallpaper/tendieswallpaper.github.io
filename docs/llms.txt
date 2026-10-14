@@ -1,0 +1,27 @@
+# Tendies Wallpaper
+
+> Tendies Wallpaper is a curated collection of dynamic, animated lock-screen wallpapers for iPhone and iPad, installed via the open-source Nugget tool with a .tendies file format. No jailbreak is required, supporting iOS & iPadOS 17 through 27.
+
+## Core Overview
+- Official Project: https://tendieswallpaper.github.io/
+- Official Wallpaper Library: https://tendieswallpaper.com/
+- Tutorial & Guide: https://nugget.host/en/tutorial/nugget
+- Open-Source Tool: https://nugget.host/ (by leminlimez)
+- Package Format: .tendies (Apple PosterBoard restore bundle)
+- System Compatibility: iOS 17 – 27, iPadOS 17 – 27
+- Jailbreak Requirement: None (Safe restore via Apple SparseRestore / BookRestore protocols)
+
+## Key Resources & Wallpapers Catalog
+- [Wallpapers Hub Directory](https://tendieswallpaper.github.io/wallpapers/): Complete index of 60 FPS animated .tendies files.
+- [Steel Ball Run JoJo Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/steel-ball-run-jojo-spin-spin/)
+- [My Dress-Up Darling Marin Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/my-dress-up-darling-marin-six-shots/)
+- [Lewis Hamilton F1 Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/f1-hamilton-sunglasses/)
+- [Mushoku Tensei Sylphiette Dynamic Wallpaper](https://tendieswallpaper.github.io/wallpapers/mushoku-tensei-sylphiette-fitz/)
+- [Step-by-Step Installation](https://nugget.host/en/tutorial/nugget): Complete guide to install .tendies wallpapers using Nugget.
+- [Pricing & Access](https://tendieswallpaper.com/en/premium): Free and premium membership options.
+
+## Technical Architecture
+A `.tendies` file contains Apple PosterBoard lock screen descriptors:
+1. posterboard: Native container files, asset catalogs, and wallpaper IDs.
+2. descriptors: Randomized UUID plist entries restoring directly into Collections / Favorites.
+3. suggested / mercury: Video and motion layers targeting native PosterBoard processes with 0% idle battery drain.
